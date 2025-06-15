@@ -1,7 +1,7 @@
-variable "public_subnets" {
-  description = "CIDR blocks for public subnets"
-  type        = list(string)
-}
+# variable "public_subnets" {
+#   description = "CIDR blocks for public subnets"
+#   type        = list(string)
+# }
 
 variable "public_subnets" {
   description = "CIDR blocks for public subnets"

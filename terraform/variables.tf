@@ -13,6 +13,7 @@ variable "environment" {
 variable "key_name" {
   description = "Name of the EC2 key pair"
   type        = string
+  default = "enzotec"
 }
 
 variable "vpc_cidr" {
@@ -49,12 +50,14 @@ variable "db_username" {
   description = "Database master username"
   type        = string
   sensitive   = true
+  default = ""
 }
 
 variable "db_password" {
   description = "Database master password"
   type        = string
   sensitive   = true
+  default = ""
 }
 
 variable "app_instance_type" {

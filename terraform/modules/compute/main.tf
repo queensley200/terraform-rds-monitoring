@@ -17,7 +17,7 @@ resource "aws_lb" "app-lb" {
   }
 }
 
-resource "aws_lb_target_group" "app-lb_target_group_arn" {
+resource "aws_lb_target_group" "app" {
   name     = "${var.environment}-app-tg"
   port     = 80
   protocol = "HTTP"
@@ -46,7 +46,7 @@ resource "aws_autoscaling_attachment" "app" {
 }
 
 resource "aws_lb_listener" "app" {
-  load_balancer_arn = aws_lb.app.arn
+  load_balancer_arn = aws_lb.app-lb.arn
   port              = 80
   protocol          = "HTTP"
 
